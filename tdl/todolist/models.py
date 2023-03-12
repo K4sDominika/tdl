@@ -2,7 +2,7 @@ from django.db import models
 
 
 # Create your models here.
-class Category(models.Choices):
+class Category(models.Model):
     CATEGORY = [
         ("NEW", "unassigned"),
         ("URGENT_AND_IMPORTANT", "urgent and important"),
@@ -11,14 +11,14 @@ class Category(models.Choices):
         ("NOT_URGENT_AND_NOT_IMPORTANT", "not urgent and not important"),
     ]
 
-    category = models.CharField(max_length=100, choices=CATEGORY)
+    category = models.CharField(max_length=100, choices=CATEGORY, default="NEW")
 
     def __str__(self):
         return self.category
 
 
 class Status(models.Model):
-    STATUS = models.Choises[
+    STATUS = [
         ("NOT_STARTED_YET", "not started yet"),
         ("IN_PROGRESS", "in progress"),
         ("PENDING", "pending"),
