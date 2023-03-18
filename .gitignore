@@ -266,5 +266,6 @@ GitHub.sublime-settings
 !.vscode/extensions.json
 .history
 
-
+.idea/
+activate/
 # making a change in code
