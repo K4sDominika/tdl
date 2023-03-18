@@ -55,3 +55,4 @@ class UpdateTask(UpdateView):
     template_name = 'task_update.html'
     fields = '__all__'
     success_url = reverse_lazy('list')
+
